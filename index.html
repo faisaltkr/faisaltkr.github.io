@@ -48,6 +48,7 @@
         }
     </script>
     <style>
+
         .card-3d {
             transform-style: preserve-3d;
             transition: transform 0.6s ease;
@@ -202,6 +203,17 @@
                 display: none;
             }
         }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        #home {
+            overflow: hidden;
+        }
+        .blob {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
 </head>
 <body x-data="{ darkMode: false }" :class="darkMode ? 'dark' : ''" class="font-sans antialiased transition-colors duration-300 bg-light text-gray-800 dark:bg-dark dark:text-gray-100">
@@ -209,7 +221,7 @@
     <canvas id="hero-canvas"></canvas>
     
     <!-- Animated Background Elements -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="fixed inset-0 overflow-hidden pointer-events-none" style="max-width: 100vw;">
         <div class="blob w-96 h-96" style="background-color: #D4AF37; top: 10%; left: 10%; opacity: 0.1;"></div>
         <div class="blob w-80 h-80" style="background-color: #D4AF37; top: 60%; right: 15%; opacity: 0.1;"></div>
         <div class="blob w-72 h-72" style="background-color: #D4AF37; bottom: 20%; left: 25%; opacity: 0.1;"></div>
@@ -637,11 +649,11 @@
                                 Loan origination and collection system developed at Metric Tree Labs. A comprehensive solution for managing loan applications, approvals, disbursements, and collections.
                             </p>
                             <div class="flex flex-wrap mb-5">
-                                <span class="badge bg-primary/20 text-primary">Laravel</span>
                                 <span class="badge bg-primary/20 text-primary">Node.js</span>
                                 <span class="badge bg-primary/20 text-primary">MySQL</span>
                                 <span class="badge bg-primary/20 text-primary">REST API</span>
                                 <span class="badge bg-primary/20 text-primary">Payment Gateway</span>
+                                <span class="badge bg-primary/20 text-primary">Third Party Integrations</span>
                             </div>
                         </div>
                     </div>
